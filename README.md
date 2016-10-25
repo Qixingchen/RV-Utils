@@ -10,6 +10,5 @@ RV-Utils
  use [jitpack](https://jitpack.io/#Qixingchen/RV-Utils)
 
 ### how to use
-please call Init at application.
 
 read javadoc in [jitpack](https://jitpack.io/com/github/Qixingchen/RV-Utils/-SNAPSHOT/javadoc/)
