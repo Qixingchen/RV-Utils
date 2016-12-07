@@ -1,1 +1,1 @@
-include ':app'
+include ':lib', ':rv-utils-sample'

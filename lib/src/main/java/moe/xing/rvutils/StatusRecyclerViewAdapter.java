@@ -163,7 +163,7 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
                 if (emptyViewID != 0) {
                     empty = emptyViewID;
                 }
-                View emptyView = LayoutInflater.from(parent.getContext()).inflate(empty, null);
+                View emptyView = LayoutInflater.from(parent.getContext()).inflate(empty, parent, false);
                 return new SimpleViewHolder(emptyView);
             case TYPE_ERROR:
                 if (errorView != null) {
@@ -173,7 +173,7 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
                 if (errorViewID != 0) {
                     error = errorViewID;
                 }
-                View errorView = LayoutInflater.from(parent.getContext()).inflate(error, null);
+                View errorView = LayoutInflater.from(parent.getContext()).inflate(error, parent, false);
                 return new SimpleViewHolder(errorView);
             case TYPE_LOADING:
                 if (loadingView != null) {
@@ -183,7 +183,7 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
                 if (loadingViewID != 0) {
                     loading = loadingViewID;
                 }
-                View loadingView = LayoutInflater.from(parent.getContext()).inflate(loading, null);
+                View loadingView = LayoutInflater.from(parent.getContext()).inflate(loading, parent, false);
                 return new SimpleViewHolder(loadingView);
         }
         return super.onCreateViewHolder(parent, viewType);
