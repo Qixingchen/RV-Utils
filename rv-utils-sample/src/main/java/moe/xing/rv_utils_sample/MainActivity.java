@@ -28,5 +28,33 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         List<String> list = new ArrayList<>();
         adapter.setList(list);
+        adapter.addData("1");
+        adapter.addData("2");
+        adapter.addData("3");
+        adapter.addData("4");
+        adapter.addData("5");
+        adapter.addData("6");
+        adapter.addData("7");
+        List<String> addList = new ArrayList<>();
+        addList.add("10");
+        addList.add("11");
+        addList.add("12");
+        addList.add("13");
+        addList.add("14");
+        addList.add("15");
+        addList.add("16");
+        addList.add("17");
+        adapter.addData(addList);
+
+        List<String> addList2 = new ArrayList<>();
+        addList.add("20");
+        addList.add("21");
+        addList.add("22");
+        addList.add("23");
+        addList.add("24");
+        addList.add("25");
+        addList.add("26");
+        addList.add("27");
+        adapter.addData(addList);
     }
 }

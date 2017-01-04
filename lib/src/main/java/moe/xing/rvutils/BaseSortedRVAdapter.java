@@ -41,7 +41,7 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
     }
 
     public void addData(@NonNull T data) {
-        datas.add(data);
+        datas.addAll(data);
     }
 
     public void addData(@Nullable List<T> dataList) {
