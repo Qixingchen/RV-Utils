@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.util.SortedList;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -78,6 +79,14 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
 
     public SortedList<T> getDatas() {
         return datas;
+    }
+
+    public ArrayList<T> getArrayList() {
+        ArrayList<T> arrayList = new ArrayList<>();
+        for (int i = 0; i < datas.size(); i++) {
+            arrayList.add(getItem(i));
+        }
+        return arrayList;
     }
 
     public void setDatas(SortedList<T> datas) {
