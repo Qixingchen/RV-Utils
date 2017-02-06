@@ -85,7 +85,7 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
     public void setList(@Nullable List<T> list) {
         if (list == null) {
             setState(STATE_ERROR);
-        } else if (list.size() == 0) {
+        } else if (list.size() == 0 && mAdapter.getAddition() == 0) {
             setState(STATE_EMPTY);
             mAdapter.removeAllDate();
         } else {
