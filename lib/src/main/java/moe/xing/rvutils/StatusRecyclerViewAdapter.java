@@ -87,10 +87,10 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
             setState(STATE_ERROR);
         } else if (list.size() == 0 && mAdapter.getAddition() == 0) {
             setState(STATE_EMPTY);
-            mAdapter.removeAllDate();
+            mAdapter.removeAllData();
         } else {
             setState(STATE_NORMAL);
-            mAdapter.removeAllDate();
+            mAdapter.removeAllData();
             mAdapter.addData(list);
         }
     }
@@ -110,14 +110,14 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
     }
 
     public void deleteItem(@NonNull T item) {
-        mAdapter.removeDate(item);
+        mAdapter.removeData(item);
         if (mAdapter.getItemCount() == 0) {
             setState(STATE_EMPTY);
         }
     }
 
     public void deleteItem(@NonNull List<T> items) {
-        mAdapter.removeDate(items);
+        mAdapter.removeData(items);
         if (mAdapter.getItemCount() == 0) {
             setState(STATE_EMPTY);
         }

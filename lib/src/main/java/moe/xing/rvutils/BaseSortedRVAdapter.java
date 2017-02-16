@@ -53,7 +53,7 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
         datas.addAll(dataList);
     }
 
-    public void removeDate(@NonNull T data) {
+    public void removeData(@NonNull T data) {
         int location = datas.indexOf(data);
 
         if (location != -1) {
@@ -61,7 +61,7 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
         }
     }
 
-    public void removeDate(@NonNull List<T> dataList) {
+    public void removeData(@NonNull List<T> dataList) {
         datas.beginBatchedUpdates();
         for (T item : dataList) {
             datas.remove(item);
@@ -69,11 +69,11 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
         datas.endBatchedUpdates();
     }
 
-    public void removeAllDate() {
+    public void removeAllData() {
         datas.clear();
     }
 
-    public int getDateSize() {
+    public int getDataSize() {
         return datas.size();
     }
 
