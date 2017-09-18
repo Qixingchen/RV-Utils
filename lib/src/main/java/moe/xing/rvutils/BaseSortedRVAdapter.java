@@ -34,7 +34,7 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
 
     @Nullable
     public T getItem(int position) {
-        if (position <= datas.size()) {
+        if (position <= datas.size() && position >= 0) {
             return datas.get(position);
         } else {
             return null;
