@@ -81,6 +81,10 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
         return datas;
     }
 
+    public void setDatas(SortedList<T> datas) {
+        this.datas = datas;
+    }
+
     public ArrayList<T> getArrayList() {
         ArrayList<T> arrayList = new ArrayList<>();
         for (int i = 0; i < datas.size(); i++) {
@@ -89,7 +93,7 @@ public abstract class BaseSortedRVAdapter<T, R extends RecyclerView.ViewHolder> 
         return arrayList;
     }
 
-    public void setDatas(SortedList<T> datas) {
-        this.datas = datas;
+    public void resetData(@NonNull List<T> newDataList) {
+        datas.replaceAll(newDataList);
     }
 }

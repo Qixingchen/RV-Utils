@@ -90,8 +90,7 @@ public class StatusRecyclerViewAdapter<T> extends RecyclerViewAdapterWrapper {
             mAdapter.removeAllData();
         } else {
             setState(STATE_NORMAL);
-            mAdapter.removeAllData();
-            mAdapter.addData(list);
+            mAdapter.resetData(list);
         }
     }
 

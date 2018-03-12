@@ -19,18 +19,31 @@ public abstract class BaseRecyclerViewAdapter<T, R extends RecyclerView.ViewHold
         setDatas(new SortedList<>(kClass, new SortedListAdapterCallback<T>(this) {
             @Override
             public int compare(T o1, T o2) {
-                return 0;
+                return rvCompare(o1, o2);
             }
 
             @Override
             public boolean areContentsTheSame(T oldItem, T newItem) {
-                return oldItem.toString().equals(newItem.toString());
+                return rvAreContentsTheSame(oldItem, newItem);
             }
 
             @Override
             public boolean areItemsTheSame(T item1, T item2) {
-                return item1.equals(item2);
+                return rvAreItemsTheSame(item1, item2);
             }
         }));
     }
+
+    protected int rvCompare(T o1, T o2) {
+        return 0;
+    }
+
+    public boolean rvAreContentsTheSame(T oldItem, T newItem) {
+        return oldItem.toString().equals(newItem.toString());
+    }
+
+    public boolean rvAreItemsTheSame(T item1, T item2) {
+        return item1.equals(item2);
+    }
+
 }

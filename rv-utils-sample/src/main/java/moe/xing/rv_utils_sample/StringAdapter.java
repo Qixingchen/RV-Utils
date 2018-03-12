@@ -30,6 +30,17 @@ class StringAdapter extends BaseRecyclerViewAdapter<String, StringAdapter.ViewHo
         holder.bindVH(datas.get(position));
     }
 
+    @Override
+    public boolean rvAreContentsTheSame(String oldItem, String newItem) {
+        return oldItem.equals(newItem);
+    }
+
+    @Override
+    public boolean rvAreItemsTheSame(String item1, String item2) {
+        //noinspection StringEquality
+        return item1 == item2;
+    }
+
     class ViewHolder extends RecyclerView.ViewHolder {
 
         ItemStringBinding mBinding;

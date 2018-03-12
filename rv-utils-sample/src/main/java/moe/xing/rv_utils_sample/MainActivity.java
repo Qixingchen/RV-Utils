@@ -1,10 +1,11 @@
 package moe.xing.rv_utils_sample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         StatusRecyclerViewAdapter<String> adapter
                 = new StatusRecyclerViewAdapter<>(new StringAdapter(), this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -47,14 +48,31 @@ public class MainActivity extends AppCompatActivity {
         adapter.addData(addList);
 
         List<String> addList2 = new ArrayList<>();
-        addList.add("20");
-        addList.add("21");
-        addList.add("22");
-        addList.add("23");
-        addList.add("24");
-        addList.add("25");
-        addList.add("26");
-        addList.add("27");
-        adapter.addData(addList);
+        addList2.add("10");
+        addList2.add("11");
+        addList2.add("12");
+        addList2.add("13");
+        addList2.add("14");
+        addList2.add("15");
+        addList2.add("16");
+        addList2.add("17");
+        addList2.add("20");
+        addList2.add("21");
+        addList2.add("22");
+        addList2.add("23");
+        addList2.add("24");
+        addList2.add("25");
+        addList2.add("26");
+        addList2.add("27");
+        addList2.add("28");
+        addList2.add("29");
+        addList2.add("30");
+
+        Button reset = findViewById(R.id.reset2_btn);
+        reset.setOnClickListener(view -> {
+            adapter.setList(addList2);
+        });
+
+        findViewById(R.id.reset1_btn).setOnClickListener(view -> adapter.setList(addList));
     }
 }
