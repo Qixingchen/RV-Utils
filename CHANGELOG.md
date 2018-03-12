@@ -1,4 +1,4 @@
-## V1.1.6
+## V1.2.0
 
 setList use resetData(which call sortList#replaceAll)  
 add rvCompare rvAreContentsTheSame rvAreItemsTheSame method to quick access sortList
